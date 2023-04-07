@@ -26,7 +26,10 @@ function streamwind_setup()
 		)
 	);
 
-	add_theme_support('custom-logo');
+	add_theme_support('custom-logo', array(
+		'flex-height' => true,
+		'flex‐width' => true,
+	));
 	add_theme_support('post-thumbnails');
 
 	add_theme_support('custom-line-height');
