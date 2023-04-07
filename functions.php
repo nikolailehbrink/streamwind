@@ -6,6 +6,8 @@
 function streamwind_setup()
 {
 	add_theme_support('title-tag');
+	add_theme_support('responsive-embeds');
+
 
 	register_nav_menus(
 		array(
