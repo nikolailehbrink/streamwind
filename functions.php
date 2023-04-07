@@ -102,8 +102,8 @@ function streamwind_asset($path)
 function streamwind_change_logo_class($new_class)
 {
 
-	$new_class = str_replace('custom-logo', 'h-7 object-contain w-auto', $new_class);
-	$new_class = str_replace('custom-logo-link', 'h-7 object-contain w-auto', $new_class);
+	$new_class = str_replace('custom-logo', 'h-7 object-contain w-auto dark:hidden', $new_class);
+	$new_class = str_replace('custom-logo-link', 'h-7 object-contain w-auto dark:hidden', $new_class);
 
 	return $new_class;
 }
@@ -164,3 +164,37 @@ function streamwind_nav_menu_add_submenu_class($classes, $args, $depth)
 	return $classes;
 }
 add_filter('nav_menu_submenu_css_class', 'streamwind_nav_menu_add_submenu_class', 10, 3);
+
+function streamwind_customize_register($wp_customize)
+{
+	// Add the dark mode logo setting
+	$wp_customize->add_setting('dark_mode_logo', array(
+		'default' => '',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'absint',
+	));
+
+	$custom_logo_priority = $wp_customize->get_control('custom_logo')->priority;
+
+	// Add the dark mode logo control
+	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'dark_mode_logo', array(
+		'label' => __('Dark Mode Logo', 'streamwind'),
+		'section' => 'title_tagline',
+		'settings' => 'dark_mode_logo',
+		'flex_height' => true,
+		'flex_width' => true,
+		'button_labels' => array(
+			'select' => __('Logo auswählen', 'streamwind'),
+			'change' => __('Logo wechseln', 'streamwind'),
+			'remove' => __('Logo entfernen', 'streamwind'),
+			'default' => __('Standardlogo verwenden', 'streamwind'),
+			'placeholder' => __('Kein Logo ausgewählt', 'streamwind'),
+			'frame_title' => __('Logo auswählen', 'streamwind'),
+			'frame_button' => __('Logo verwenden', 'streamwind'),
+		),
+		'priority' => $custom_logo_priority + 1,
+
+	)));
+}
+
+add_action('customize_register', 'streamwind_customize_register');

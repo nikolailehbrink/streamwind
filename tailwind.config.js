@@ -2,6 +2,7 @@ const theme = require("./theme.json");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./*.php",
     "./**/*.php",

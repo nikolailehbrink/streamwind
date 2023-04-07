@@ -7,6 +7,7 @@ StreamWind is a modern, responsive and user-friendly boilerplate WordPress theme
 ## Features
 
 - Based on [Tailwind CSS 3.3](https://tailwindcss.com/)
+- Dark Mode
 - theme.json (Version 2) Support
 - Custom design with responsive layouts
 - Easy integration and customization
@@ -82,3 +83,15 @@ const debouncedFunction = _.debounce(() => {
 ```
 
 By following these steps, you can seamlessly integrate and use any npm package in your theme, enhancing its functionality and providing additional features.
+
+## Dark Mode
+
+The dark mode functionality in this theme allows users to switch between light and dark modes. The initial mode is set based on the user's system preferences. If the user manually changes the setting using the dark mode toggle, this setting will be stored in local storage and will persist across page reloads.
+
+The dark mode feature works as follows:
+
+1. Upon initial page load, the script checks if a dark mode setting is stored in local storage.
+2. If a setting is stored in local storage, the dark mode is activated or deactivated accordingly.
+3. If no setting is stored in local storage, the dark mode is set based on the user's system preferences.
+4. An event listener is added to listen for changes in the user's system preferences and adjusts the dark mode accordingly if the user has not manually changed the setting.
+5. The user can manually change the dark mode using the dark mode toggle. This change will be stored in local storage and will persist across page reloads.
