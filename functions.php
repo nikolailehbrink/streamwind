@@ -1,7 +1,15 @@
 <?php
 
 /**
- * Theme setup.
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * This function adds support for a variety of features in the StreamWind theme,
+ * such as title tags, responsive embeds, navigation menus, HTML5 markup, custom logos,
+ * post thumbnails, custom line heights, and editor styles. It hooks into the
+ * 'after_setup_theme' action to initialize these features when the theme is activated.
+ *
+ * @since   1.0.0
+ * @return  void
  */
 function streamwind_setup()
 {
@@ -43,7 +51,14 @@ function streamwind_setup()
 add_action('after_setup_theme', 'streamwind_setup');
 
 /**
- * Enqueue theme assets.
+ * Enqueues StreamWind theme styles and scripts.
+ *
+ * This function enqueues the StreamWind theme's main CSS and JS files, using their respective
+ * file paths and the theme's version number as parameters. It hooks into the 'wp_enqueue_scripts'
+ * action to ensure that these files are loaded on the front-end.
+ *
+ * @since   1.0.0
+ * @return  void
  */
 function streamwind_enqueue_scripts()
 {
@@ -52,15 +67,18 @@ function streamwind_enqueue_scripts()
 	wp_enqueue_style('streamwind', streamwind_asset('css/app.css'), array(), $theme->get('Version'));
 	wp_enqueue_script('streamwind', streamwind_asset('js/app.js'), array(), $theme->get('Version'));
 }
-
 add_action('wp_enqueue_scripts', 'streamwind_enqueue_scripts');
 
 /**
- * Get asset path.
+ * Retrieves the URL of a StreamWind theme asset.
  *
- * @param string  $path Path to asset.
+ * This function returns the URL of a given asset file (CSS, JS, images, etc.) within the StreamWind theme.
+ * In a production environment, the URL is returned without any modifications. In other environments,
+ * a query parameter 'time' is added with the current timestamp to force cache invalidation during development.
  *
- * @return string
+ * @since   1.0.0
+ * @param   string $path The relative path of the asset file within the StreamWind theme.
+ * @return  string The URL of the asset file.
  */
 function streamwind_asset($path)
 {
@@ -71,8 +89,16 @@ function streamwind_asset($path)
 	return add_query_arg('time', time(),  get_stylesheet_directory_uri() . '/' . $path);
 }
 
-
-
+/**
+ * Modifies the CSS classes of the custom logo.
+ *
+ * This function replaces the 'custom-logo' and 'custom-logo-link' CSS classes with the 'h-7 object-contain w-auto'
+ * classes to adjust the logo size and display properties. It is hooked into the 'get_custom_logo' filter.
+ *
+ * @since   1.0.0
+ * @param   string $new_class The original CSS classes of the custom logo.
+ * @return  string The modified CSS classes of the custom logo.
+ */
 function streamwind_change_logo_class($new_class)
 {
 
@@ -84,13 +110,18 @@ function streamwind_change_logo_class($new_class)
 add_filter('get_custom_logo', 'streamwind_change_logo_class');
 
 /**
- * Adds option 'li_class' to 'wp_nav_menu'.
+ * Adds custom CSS classes to menu list items (li elements) in a WordPress navigation menu.
  *
- * @param string  $classes String of classes.
- * @param mixed   $item The current item.
- * @param WP_Term $args Holds the nav menu arguments.
+ * This function allows you to add custom CSS classes to menu list items based on the depth
+ * of the menu item in the navigation structure. It hooks into the 'nav_menu_css_class' filter
+ * to modify the classes for each menu item.
  *
- * @return array
+ * @since   1.0.0
+ * @param   array    $classes An array of CSS classes applied to the menu list item.
+ * @param   WP_Post  $item    The current menu item.
+ * @param   stdClass $args    An object containing wp_nav_menu() arguments.
+ * @param   int      $depth   Depth of the menu item.
+ * @return  array    The modified array of CSS classes applied to the menu list item.
  */
 function streamwind_nav_menu_add_li_class($classes, $item, $args, $depth)
 {
@@ -104,18 +135,22 @@ function streamwind_nav_menu_add_li_class($classes, $item, $args, $depth)
 
 	return $classes;
 }
-
 add_filter('nav_menu_css_class', 'streamwind_nav_menu_add_li_class', 10, 4);
 
 /**
- * Adds option 'submenu_class' to 'wp_nav_menu'.
+ * Adds custom CSS classes to submenu elements (ul elements) in a WordPress navigation menu.
  *
- * @param string  $classes String of classes.
- * @param mixed   $item The current item.
- * @param WP_Term $args Holds the nav menu arguments.
+ * This function allows you to add custom CSS classes to submenu elements based on the depth
+ * of the submenu in the navigation structure. It hooks into the 'nav_menu_submenu_css_class' filter
+ * to modify the classes for each submenu.
  *
- * @return array
+ * @since   1.0.0
+ * @param   array    $classes An array of CSS classes applied to the submenu element.
+ * @param   stdClass $args    An object containing wp_nav_menu() arguments.
+ * @param   int      $depth   Depth of the submenu in the menu hierarchy.
+ * @return  array    The modified array of CSS classes applied to the submenu element.
  */
+
 function streamwind_nav_menu_add_submenu_class($classes, $args, $depth)
 {
 	if (isset($args->submenu_class)) {
@@ -128,5 +163,4 @@ function streamwind_nav_menu_add_submenu_class($classes, $args, $depth)
 
 	return $classes;
 }
-
 add_filter('nav_menu_submenu_css_class', 'streamwind_nav_menu_add_submenu_class', 10, 3);
