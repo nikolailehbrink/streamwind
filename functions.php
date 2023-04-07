@@ -29,6 +29,7 @@ function streamwind_setup()
 	add_theme_support('custom-logo');
 	add_theme_support('post-thumbnails');
 
+	add_theme_support('custom-line-height');
 	add_theme_support('align-wide');
 	add_theme_support('wp-block-styles');
 
