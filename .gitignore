@@ -1,0 +1,9 @@
+/node_modules
+/.idea
+/.vscode
+
+# Ignore css and js folders because they are automatically build using esbuild and tailwindcss cli when running npm run watch or npm run production. 
+# No need for them to be in the repository.
+/css
+/js
+
