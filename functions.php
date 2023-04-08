@@ -90,26 +90,6 @@ function streamwind_asset($path)
 }
 
 /**
- * Modifies the CSS classes of the custom logo.
- *
- * This function replaces the 'custom-logo' and 'custom-logo-link' CSS classes with the 'h-7 object-contain w-auto'
- * classes to adjust the logo size and display properties. It is hooked into the 'get_custom_logo' filter.
- *
- * @since   1.0.0
- * @param   string $new_class The original CSS classes of the custom logo.
- * @return  string The modified CSS classes of the custom logo.
- */
-function streamwind_change_logo_class($new_class)
-{
-
-	$new_class = str_replace('custom-logo', 'h-7 object-contain w-auto dark:hidden', $new_class);
-	$new_class = str_replace('custom-logo-link', 'h-7 object-contain w-auto dark:hidden', $new_class);
-
-	return $new_class;
-}
-add_filter('get_custom_logo', 'streamwind_change_logo_class');
-
-/**
  * Adds custom CSS classes to menu list items (li elements) in a WordPress navigation menu.
  *
  * This function allows you to add custom CSS classes to menu list items based on the depth

@@ -18,19 +18,34 @@
 			<div class="py-6 lg:flex lg:justify-between lg:items-center">
 				<div class="flex items-center justify-between">
 					<div>
-						<?php
-						$custom_logo_id = get_theme_mod('custom_logo');
-						$dark_mode_logo_id = get_theme_mod('dark_mode_logo');
-						$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-						$dark_mode_logo = wp_get_attachment_image_src($dark_mode_logo_id, 'full');
-						?>
 
 						<?php if (has_custom_logo()) { ?>
-							<?php the_custom_logo(); ?>
-							<?php if ($dark_mode_logo_id) { ?>
-								<img class="hidden object-contain w-auto dark-mode-logo h-7 dark:block" src="<?php echo esc_url($dark_mode_logo[0]); ?>" alt="<?php echo get_bloginfo('name'); ?>">
-							<?php } ?>
-
+							<?php
+							/**
+							 * Displays the site logo or site title and description.
+							 *
+							 * - If a custom logo is set, it will display the custom logo in both light and dark modes.
+							 * - If a separate dark mode logo is set, it will be displayed in dark mode only.
+							 * - If no custom logo is set, the site title and description will be displayed.
+							 *
+							 * @uses has_custom_logo() Checks if a custom logo is set.
+							 * @uses get_theme_mod() Retrieves the value of the specified theme modification.
+							 * @uses wp_get_attachment_image_src() Gets the URL and dimensions of an attachment image.
+							 * @uses esc_url() Escapes a URL for output.
+							 * @uses home_url() Retrieves the URL for the home page.
+							 * @uses get_bloginfo() Retrieves information about the current site.
+							 */
+							$custom_logo_id = get_theme_mod('custom_logo');
+							$custom_logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+							$dark_mode_logo_id = get_theme_mod('dark_mode_logo');
+							$dark_mode_logo = wp_get_attachment_image_src($dark_mode_logo_id, 'full');
+							?>
+							<a href="<?php echo esc_url(home_url()); ?>">
+								<img class="object-contain w-auto h-7 <?php echo ($dark_mode_logo_id) ? 'dark:hidden' : ''; ?>" src="<?php echo esc_url($custom_logo[0]); ?>" alt="<?php echo get_bloginfo('name'); ?>">
+								<?php if ($dark_mode_logo_id) { ?>
+									<img class="hidden object-contain w-auto dark-mode-logo h-7 dark:block" src="<?php echo esc_url($dark_mode_logo[0]); ?>" alt="<?php echo get_bloginfo('name'); ?>">
+								<?php } ?>
+							</a>
 						<?php } else { ?>
 							<a href="<?php echo get_bloginfo('url'); ?>" class="text-lg font-extrabold uppercase">
 								<?php echo get_bloginfo('name'); ?>
@@ -97,7 +112,6 @@
 	</header>
 
 	<main class="flex flex-col flex-grow site-content">
-
 		<?php if (is_front_page()) { ?>
 			<!-- Start introduction -->
 			<div class="container flex flex-col items-center justify-center flex-grow h-full mx-auto ">
