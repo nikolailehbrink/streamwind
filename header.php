@@ -106,6 +106,7 @@
 							<path d="M19 11h2m-1 -1v2"></path>
 						</svg>
 					</button>
+					<?php get_search_form() ?>
 				</div>
 			</div>
 		</div>
