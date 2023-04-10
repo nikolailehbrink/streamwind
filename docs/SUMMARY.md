@@ -21,3 +21,7 @@
 * [🔍 Search form](features/search-form.md)
 * [🔗 Bundling with ESBuild](features/bundling-with-esbuild.md)
 * [📦 NPM Packages Integration](features/npm-packages-integration.md)
+
+***
+
+* [🚁 Help](help.md)
