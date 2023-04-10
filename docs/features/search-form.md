@@ -6,7 +6,7 @@ The theme comes with integrated WordPress search functionality, making it easy f
 
 ## Default Search Form in the Header
 
-By default, the search form is included in the site header, allowing users to access the search functionality from any page. This ensures a seamless browsing experience and enables quick access to the search feature.
+By default, the search form is included in the `header.php` file, allowing users to access the search functionality from any page. This ensures a seamless browsing experience and enables quick access to the search feature.
 
 ## Customizing the Search Form
 

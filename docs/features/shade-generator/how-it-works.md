@@ -13,6 +13,7 @@ The file contains a JSON object where each key is a color slug matching a color 
 
 Suppose you have the following color entry in your `theme.json` file:
 
+{% code title="theme.json" %}
 ```json
 {
   "name": "Primary",
@@ -20,9 +21,11 @@ Suppose you have the following color entry in your `theme.json` file:
   "color": "#5A189A"
 }
 ```
+{% endcode %}
 
-To configure the color options for the "Primary" color, you need to use the color slug ("primary") in the color-options.json file:
+To configure the color options for the "Primary" color, you need to use the color slug ("primary") in the `color-options.json` file:
 
+{% code title="/options/color-options.php" %}
 ```json
 {
   "primary": {
@@ -31,6 +34,7 @@ To configure the color options for the "Primary" color, you need to use the colo
   }
 }
 ```
+{% endcode %}
 
 In this example, the "Primary" color is set to generate shades from 100 to 950, with the base shade being 500.
 

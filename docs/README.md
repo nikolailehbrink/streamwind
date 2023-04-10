@@ -8,7 +8,7 @@ coverY: 0
 
 # Welcome to StreamWind!
 
-The theme is designed to cater to both inexperienced developers and seasoned pros, this theme offers a wide range of features such as a [Color Mapper and Shade Generator](https://github.com/nikolailehbrink/streamwind#color-mapper-and-shade-generator-), [Dark Mode](https://github.com/nikolailehbrink/streamwind#dark-mode-), search functionality and much more. StreamWind makes it easy for anyone to dive into the world of WordPress themes and create a stunning website.
+The theme is designed to cater to both inexperienced developers and seasoned pros, this theme offers a wide range of features such as a Color Mapper and [Shade Generator](features/shade-generator/), [Dark Mode](features/dark-mode/), [search functionality](features/search-form.md) and [much more](broken-reference). StreamWind makes it easy for anyone to dive into the world of WordPress themes and create a stunning website.
 
 ## Shortlinks
 

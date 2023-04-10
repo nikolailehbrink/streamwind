@@ -19,7 +19,8 @@
 * [🌈 Shade Generator](features/shade-generator/README.md)
   * [How it works](features/shade-generator/how-it-works.md)
 * [🔍 Search form](features/search-form.md)
-* [🔗 Bundling with ESBuild](features/bundling-with-esbuild.md)
+* [🔗 Bundling with ESBuild](features/bundling-with-esbuild/README.md)
+  * [Build Scripts](features/bundling-with-esbuild/build-scripts.md)
 * [📦 NPM Packages Integration](features/npm-packages-integration.md)
 
 ***

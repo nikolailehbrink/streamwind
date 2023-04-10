@@ -1,5 +1,7 @@
 # 🔗 Bundling with ESBuild
 
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
 This theme uses [ESBuild](https://esbuild.github.io/) as its bundler to optimize and compile the JavaScript files. ESBuild is a fast and efficient bundler that provides various benefits, such as tree-shaking, minification, and more.
 
 In this theme, ESBuild bundles the `resources/app.js` file into the `js/app.js` file. During the bundling process, ESBuild performs the following optimizations:
