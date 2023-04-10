@@ -68,6 +68,14 @@ This will automatically watch for changes in your source files and rebuild the p
 
 And there you have it! You're all set to start crafting your amazing WordPress website using StreamWind. Happy coding! 🎉
 
+### Developing with LocalWP 🛠️
+
+If you're looking for a powerful and user-friendly tool for developing your WordPress themes, I highly recommend using [LocalWP](https://localwp.com/). LocalWP is a free, open-source software that lets you quickly and easily set up a local development environment for your WordPress projects. With LocalWP, you can create multiple WordPress sites, manage plugins and themes, and test your code changes in a safe and isolated environment.
+
+To get started with LocalWP, download and install the software from their [official website](https://localwp.com/). Once installed, you can create a new WordPress site, import an existing one, or clone a site from a remote server. Once you've created your site, you can install and activate the StreamWind boilerplate theme to start developing your custom WordPress theme.
+
+LocalWP comes with a host of useful features, including automatic SSL, PHP and MySQL version management, and the ability to create and manage backups of your sites. It's the perfect tool for building and testing WordPress themes, and we highly recommend giving it a try.
+
 ## Step 5: Build for Production 🏗️
 
 Once you've finished developing your theme, it's time to prepare it for the big world out there. Building for production ensures that your theme is optimized, fast, and ready to impress your visitors.
@@ -120,6 +128,7 @@ This theme uses a set of npm scripts to build and compile the CSS and JavaScript
   - `dev:js`: Bundles the `app.js` file without minification using esbuild.
 
 - `watch`: Runs all watch scripts concurrently (`watch:css-app`, `watch:css-editor`, and `watch:js`).
+
   - `watch:css-app`: Compiles the `app.css` file and watches for changes using TailwindCSS.
   - `watch:css-editor`: Compiles the `editor-style.css` file and watches for changes using TailwindCSS.
   - `watch:js`: Bundles the `app.js` file and watches for changes using esbuild.
