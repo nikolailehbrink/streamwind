@@ -1,6 +1,6 @@
 # StreamWind 💨
 
-StreamWind is a modern, responsive, and user-friendly boilerplate WordPress theme based on the popular TailwindCSS framework. Designed to cater to both inexperienced developers and seasoned pros, this theme offers a wide range of features such as Dark Mode, search functionality, and much more. StreamWind makes it easy for anyone to dive into the world of WordPress themes and create a stunning website.
+StreamWind is a modern, responsive, and user-friendly boilerplate WordPress theme based on the popular TailwindCSS framework. Designed to cater to both inexperienced developers and seasoned pros, this theme offers a wide range of features such as a [Color Mapper and Shade Generator](#color-mapper-and-shade-generator-), [Dark Mode](#dark-mode-), search functionality and much more. StreamWind makes it easy for anyone to dive into the world of WordPress themes and create a stunning website.
 
 ![Header Image](screenshot.png)
 
@@ -99,7 +99,7 @@ And that's it! You've successfully built your WordPress theme for production usi
 
 StreamWind comes packed with a multitude of features that cater to both beginners and experienced developers. These features have been carefully selected and implemented to provide a solid foundation for creating an engaging and unique WordPress theme. In the following sections, we'll delve into the key features of StreamWind.
 
-## Dark Mode
+## Dark Mode 🌙
 
 The dark mode functionality in this theme allows users to switch between light and dark modes. The initial mode is set based on the user's system preferences. If the user manually changes the setting using the dark mode toggle, this setting will be stored in local storage and will persist across page reloads.
 
@@ -110,6 +110,18 @@ The dark mode feature works as follows:
 3. If no setting is stored in local storage, the dark mode is set based on the user's system preferences.
 4. An event listener is added to listen for changes in the user's system preferences and adjusts the dark mode accordingly if the user has not manually changed the setting.
 5. The user can manually change the dark mode using the dark mode toggle. This change will be stored in local storage and will persist across page reloads.
+
+## Color Mapper and Shade Generator 🌈
+
+With the **Color Mapper** feature, you can seamlessly integrate colors from your `theme.json` file directly into your TailwindCSS configuration. This allows you to manage your color palette in a central file for both WordPress and TailwindCSS.
+
+The **Shade Generator** feature lets you automatically generate various shades for your base colors. You can choose whether or not to generate shades for each color in your `color-options.json` file. The shades are generated in 100-step increments from 100 to 950, with the base color defaulting to 500.
+
+Here are the key features at a glance:
+
+- **Easy Integration**: Use colors from your `theme.json` file directly in your TailwindCSS configuration without manually copying each color value.
+- **Automatic Shade Generation**: Generate shades for each base color in your palette to ensure a consistent and appealing design in your project.
+- **Customizable Settings**: Choose whether or not to generate shades for each color and adjust the base color for shades as desired.
 
 ## Build Scripts
 

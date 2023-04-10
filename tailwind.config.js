@@ -1,4 +1,6 @@
 const theme = require("./theme.json");
+const streamwind = require("./streamwind.js");
+const colorOptions = require("./options/color-options.json");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,6 +13,12 @@ module.exports = {
     "./safelist.txt",
   ],
   theme: {
+    extend: {
+      colors: streamwind.colorMapper(
+        streamwind.theme("settings.color.palette", theme),
+        colorOptions
+      ),
+    },
     container: {
       padding: {
         DEFAULT: "1rem",

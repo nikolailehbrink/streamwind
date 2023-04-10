@@ -1,0 +1,10 @@
+{
+  "primary": {
+    "generateShades": true,
+    "baseShade": 500
+  },
+  "secondary": {
+    "generateShades": true,
+    "baseShade": 600
+  }
+}
