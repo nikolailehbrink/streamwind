@@ -22,6 +22,10 @@
 * [🔗 Bundling with ESBuild](features/bundling-with-esbuild/README.md)
   * [Build Scripts](features/bundling-with-esbuild/build-scripts.md)
 * [📦 NPM Packages Integration](features/npm-packages-integration.md)
+* [😎 Automated Deploy Actions](features/automated-deploy-actions/README.md)
+  * [SSH-Deploy](features/automated-deploy-actions/ssh-deploy.md)
+  * [SFTP-Deploy](features/automated-deploy-actions/sftp-deploy.md)
+  * [FTP-Deploy](features/automated-deploy-actions/ftp-deploy.md)
 
 ***
 

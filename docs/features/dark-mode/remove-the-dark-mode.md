@@ -9,5 +9,6 @@ To remove the Tailwind dark mode functionality from the StreamWind theme, follow
    * Dark mode toggle event listener
 2. Remove any dark mode related styles from your CSS or remove the `dark:` variants in your Tailwind CSS classes.
 3. Remove the dark mode toggle element from your HTML, which is typically identified by the ID `darkModeToggle`.
+4. Remove  `darkMode: 'class',`
 
 By following these steps, you will remove the dark mode functionality and related code from your StreamWind theme.

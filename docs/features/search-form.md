@@ -2,7 +2,7 @@
 
 The theme comes with integrated WordPress search functionality, making it easy for users to find content on your website. This powerful feature enhances user experience and allows visitors to easily locate relevant information within your site.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Default Search Form in the Header
 
