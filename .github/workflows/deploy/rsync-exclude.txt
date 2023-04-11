@@ -1,0 +1,14 @@
+**/.git*
+**/.git*/**
+**/.vscode/**
+**/node_modules/**
+**/.DS_Store
+CHANGELOG.md
+README.md
+package-lock.json
+package.json
+tailwind.config.js
+postcss.config.js
+**/resources/**
+/options/**
+safelist.txt
