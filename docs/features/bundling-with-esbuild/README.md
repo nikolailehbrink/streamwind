@@ -1,6 +1,6 @@
 # 🔗 Bundling with ESBuild
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 This theme uses [ESBuild](https://esbuild.github.io/) as its bundler to optimize and compile the JavaScript files. ESBuild is a fast and efficient bundler that provides various benefits, such as tree-shaking, minification, and more.
 

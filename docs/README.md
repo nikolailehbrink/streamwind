@@ -2,7 +2,7 @@
 description: >-
   StreamWind is a modern, responsive, and user-friendly boilerplate WordPress
   theme based on the popular TailwindCSS framework.
-cover: .gitbook/assets/StreamWind_GitBook_Header (1).jpg
+cover: .gitbook/assets/StreamWind_GitBook_Header.jpg
 coverY: 0
 ---
 
