@@ -1,5 +1,5 @@
 const theme = require("./theme.json");
-const streamwind = require("@nikolailehbrink/streamwind-package");
+const streamwind = require("streamwind-package");
 const colorOptions = require("./options/color-options.json");
 
 /** @type {import('tailwindcss').Config} */

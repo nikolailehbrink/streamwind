@@ -26,7 +26,6 @@
 		"watch": "cross-env NODE_ENV=development concurrently \"npm run watch:css-app\" \"npm run watch:css-editor\" \"npm run watch:js\""
 	},
 	"devDependencies": {
-		"@nikolailehbrink/streamwind-package": "^1.0.0",
 		"autoprefixer": "^10.4.0",
 		"concurrently": "^8.0.1",
 		"cross-env": "^6.0.3",
@@ -36,6 +35,7 @@
 		"postcss-nested": "^5.0.3",
 		"postcss-nested-ancestors": "^3.0.0",
 		"resolve-url-loader": "^3.1.2",
+		"streamwind-package": "^1.0.2",
 		"tailwindcss": "^3.3.0"
 	}
 }
