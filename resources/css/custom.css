@@ -1,12 +1,11 @@
-@layer components {
-  .alignfull {
-    max-width: 100%;
-  }
+:root {
+  --scroll-bar: 15px;
 }
 
-article > *:not(.entry-content),
-.entry-content > * {
-  @apply mx-auto;
+@layer components {
+  .alignfull {
+    @apply mx-[calc((50%_-_50vw)_+_(var(--scroll-bar)_/_2))] max-w-[100vw] w-[calc(100vw_-_var(--scroll-bar))];
+  }
 }
 
 .entry-content,
