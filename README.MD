@@ -2,6 +2,8 @@
 
 StreamWind is a modern, responsive, and user-friendly boilerplate WordPress theme based on the popular TailwindCSS framework. Designed to cater to both inexperienced developers and seasoned pros, this theme offers a wide range of features such as a Color Mapper and Shade Generator, Dark Mode, search functionality and much more. StreamWind makes it easy for anyone to dive into the world of WordPress themes and create a stunning website.
 
+In addition to the core features, StreamWind also includes FTP, SFTP, and SSH Deploy GitHub Actions to simplify the deployment process.
+
 ![Header Image](screenshot.png)
 
 ## Documentation 📚
