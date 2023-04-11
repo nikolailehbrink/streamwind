@@ -1,6 +1,6 @@
 ---
 cover: ../../.gitbook/assets/image (1).png
-coverY: -225
+coverY: -160.69261477045907
 ---
 
 # FTP-Deploy

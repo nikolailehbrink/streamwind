@@ -2,7 +2,7 @@
 
 The **Shade Generator** feature lets you automatically generate various shades for your base colors. You can choose whether or not to generate shades for each color in your `color-options.json` file. The shades are generated in 100-step increments from 100 to 950, with the base color defaulting to 500.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt="Image of code for custom JSON color configuration for primary and secondary colors with base shade values"><figcaption><p>Custom color configuration in JSON: Defining primary and secondary colors with base shades for dynamic theme generation</p></figcaption></figure>
 
 Here are the key features at a glance:
 

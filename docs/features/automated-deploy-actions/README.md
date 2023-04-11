@@ -2,7 +2,7 @@
 
 Automate the deployment of your production ready theme with the user-friendly and efficient deploy actions. They enable a quick and hassle-free publishing of your changes to the web server of your choice. Three different deploy actions – FTP, SFTP, and SSH – offer flexible options to meet your needs.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Every GitHub-Action</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p><em>An example of an FTP-Deploy GitHub Action workflow, which includes steps for checking out the latest code, setting up Node.js, installing dependencies, and building the project.</em></p></figcaption></figure>
 
 ## Benefits of Deploy Actions
 
