@@ -42,4 +42,4 @@ jobs:
             --compress
             --delete-after
             --human-readable
-            --exclude-from=.github/workflows/deploy/rsync-exclude.txt
+            --exclude-from=.github/workflows/deploy/exlude-files.txt
