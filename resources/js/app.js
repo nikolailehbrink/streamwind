@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // Listen for changes in the user's system preference for dark mode
   const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
   darkModeMediaQuery.addEventListener("change", () => {
-    if (localStorage.getItem("dark-mode") === null) {
+    if (!localStorage.getItem("dark-mode")) {
       setThemeBasedOnSystemPreference();
     }
   });
@@ -44,9 +44,8 @@ window.addEventListener("DOMContentLoaded", function () {
    * This event listener toggles the 'dark' class on the document's root element
    * and updates the local storage value for the dark mode setting.
    */
-  document
-    .getElementById("darkModeToggle")
-    .addEventListener("click", function () {
+  document.querySelectorAll(".dark-mode-toggle").forEach((button) => {
+    button.addEventListener("click", function () {
       document.documentElement.classList.toggle("dark");
 
       if (document.documentElement.classList.contains("dark")) {
@@ -55,6 +54,7 @@ window.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("dark-mode", "false");
       }
     });
+  });
 
   /**
    * Toggle the visibility of the primary menu.
