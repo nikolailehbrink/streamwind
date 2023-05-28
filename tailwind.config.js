@@ -23,6 +23,7 @@ module.exports = {
       padding: {
         DEFAULT: "1rem",
       },
+      center: true,
     },
     screens: {
       xs: "480px",
