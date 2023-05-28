@@ -4,7 +4,7 @@
 
 <?php do_action('streamwind_content_after'); ?>
 
-<footer class="py-4 site-footer bg-slate-50 dark:bg-slate-950" role="contentinfo">
+<footer class="py-4 site-footer bg-primary-50 dark:bg-primary-900" role="contentinfo">
 	<?php do_action('streamwind_footer'); ?>
 
 	<div class="container mx-auto text-center">

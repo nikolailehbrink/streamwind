@@ -10,9 +10,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('text-gray-950 bg-white antialiased flex flex-col min-h-screen dark:bg-slate-900 dark:text-white'); ?>>
+<body <?php body_class('text-gray-950 bg-white antialiased flex flex-col min-h-screen dark:bg-primary-950 dark:text-white'); ?>>
 
-	<header class="sticky top-0 mb-4 bg-white border-b-2 dark:bg-slate-950 border-slate-50 dark:border-slate-800">
+	<header class="sticky top-0 z-10 mb-4 bg-white border-b-2 dark:bg-primary-950/50 backdrop-filter backdrop-blur-md border-primary-50 dark:border-primary-800">
 
 		<div class="container mx-auto">
 			<div class="py-6 lg:flex lg:justify-between lg:items-center">

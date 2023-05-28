@@ -1,4 +1,4 @@
-<form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="inline-flex gap-2 px-4 py-2 border-2 rounded-full border-slate-200 bg-slate-100 dark:bg-slate-600 dark:text-white focus-within:border-2 focus-within:border-slate-500">
+<form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="inline-flex gap-2 px-4 py-2 border-2 rounded-full border-primary-200 bg-primary-100 dark:bg-primary-800 dark:text-white focus-within:border-2 focus-within:border-primary-500">
     <label for="search-input" class="sr-only"><?php esc_html_e('Search for:', 'streamwind'); ?></label>
     <input type="text" id="search-input" class="w-24 bg-transparent focus:outline-none" placeholder="<?php esc_attr_e('Search', 'streamwind'); ?>" value="" name="search" title="<?php esc_attr_e('Search for:', 'streamwind') ?>" />
     <button type="submit" class="focus:outline-none group">
